@@ -36,10 +36,10 @@ class HidingData:
 
     for j in range(len(array)):
         data_for_arr = text.add_run(letter_in_encrypted_text[array[j]])
-        data_for_arr.font.color.rgb = docx.shared.RGBColor(255, 0, 0)
+        data_for_arr.font.color.rgb = docx.shared.RGBColor(1, 0, 0)
         if j == (len(array) - 1):
             data_for_arr = text.add_run(letter_in_encrypted_text[array[j] + 1:])
         else:
             data_for_arr = text.add_run(letter_in_encrypted_text[array[j] + 1:array[j + 1]])
     document_wt.save("test.docx")
-    print("Успешно!")
+    print("Good!")
